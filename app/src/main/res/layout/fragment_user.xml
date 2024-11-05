@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.UserFragment">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="0dp"
+        app:met_hideUnderline="true"
+        android:hint="@string/user_search"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_users"
+        android:layout_below="@+id/search_bar"
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

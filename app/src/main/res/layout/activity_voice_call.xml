@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#EAEAEA"
+    tools:context=".VoiceCallActivity">
+
+<!-- Remote User's Video View -->
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remoteVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#000000"
+        android:visibility="gone" />
+
+<!-- Local User's Video View -->
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/localVideoView"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:background="#000000"
+        android:visibility="gone" />
+
+    <!-- Call Status and Controls -->
+    <TextView
+        android:id="@+id/callStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/localVideoView"
+        android:text="Connecting..."
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/muteButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_mic_on"
+        android:contentDescription="Mute" />
+
+    <ImageButton
+        android:id="@+id/hangupButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_call_end"
+        android:contentDescription="Hang Up" />
+
+</RelativeLayout>
